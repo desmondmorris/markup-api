@@ -13,22 +13,52 @@
       padding: 1rem;
       margin: 5rem auto 0;
     }
+
+    h2 {
+      color: #666;
+    }
+
+    .target {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
   <h1>Markup API Demo</h1>
+
+  <h2>Description</h2>
   <p>This is a demo of the <a href="https://github.com/mmwtsn/markup-api">Markup
-    API</a>. When the page loads, it pulls data from the API containing an HTML5
+    API</a>.</p>
+
+  <p>When the page loads, it pulls data from the API containing an HTML5
   nav element and CSS. Each is appended to its appropriate place within the page
-  automatically. If you can see a styled "home" button below, it worked.</p>
+  automatically.</p>
+
+  <p>If you can see a styled "home" button in the box below, it worked!</p>
+
+  <div class="target" id="target"></div>
+
+  <h2>Documentation</h2>
+  <p>Please see the <a href="https://github.com/mmwtsn/markup-api">README</a> on
+  GitHub for usage documentation.</p>
 
   <script type="text/javascript" charset="utf-8">
-    function callback(data) {
-      $('head').append(data.css);
-      $('body').append(data.nav);
+    function insertStyles(styles) {
+      var open  = '<style type="text/css" media="all">';
+      var close = '</style>';
+
+      return open + styles + close;
+    }
+
+    function render(data) {
+      $('head').append(insertStyles(data.css));
+      $('#target').append(data.html);
     }
   </script>
 
-  <script src="http://json-api-test.content.ibmcloud.io/nav.jsonp?callback"></script>
+  <script
+src="http://markup.content.ibmcloud.io/api/v1/cloud.json?callback=render"></script>
 </body>
 </html>
