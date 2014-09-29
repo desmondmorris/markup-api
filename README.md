@@ -1,7 +1,7 @@
 # Markup API
 ## Description
 A JSON API that returns HTML for the IBM Cloud Marketing properties. Can be used
-by client-side applicaitons with a [JSONP
+by client-side applications with a [JSONP
 callback](http://en.wikipedia.org/wiki/JSONP).
 
 Built for the IBM Cloud Lab.
