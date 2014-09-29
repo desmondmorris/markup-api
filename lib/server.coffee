@@ -6,8 +6,11 @@ app.set 'view engine', 'jade'
 
 port = process.env.PORT || 4000
 
+logRequest = (url, status) ->
+  console.log 'Request for: ' + url + ' (' + status + ')'
+
 app.get '/', (req, res) ->
-  console.log 'Request for: ' + req.url + ' (' + res.statusCode + ')'
+  logRequest req.url, res.statusCode
 
   res.render 'index',
     title: 'Markup API Documentation'
