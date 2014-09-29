@@ -1,8 +1,11 @@
 {
   "name": "markup-api",
   "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+    }
+  },
   "description": "Markup API for the IBM Cloud Lab",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/mmwtsn/markup-api"
