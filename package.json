@@ -1,0 +1,19 @@
+{
+  "name": "markup-api",
+  "version": "0.0.1",
+  "description": "Markup API for the IBM Cloud Lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmwtsn/markup-api"
+  },
+  "author": "M. Maxwell Watson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmwtsn/markup-api/issues"
+  },
+  "homepage": "https://github.com/mmwtsn/markup-api"
+}
