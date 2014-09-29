@@ -1,2 +1,34 @@
-<h1>Markup API Demo</h1>
-<p>Test commit.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Markup API Test</title>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <style type="text/css" media="all">
+    body {
+      max-width: 600px;
+      width: 100%;
+      padding: 1rem;
+      margin: 5rem auto 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Markup API Demo</h1>
+  <p>This is a demo of the <a href="https://github.com/mmwtsn/markup-api">Markup
+    API</a>. When the page loads, it pulls data from the API containing an HTML5
+  nav element and CSS. Each is appended to its appropriate place within the page
+  automatically. If you can see a styled "home" button below, it worked.</p>
+
+  <script type="text/javascript" charset="utf-8">
+    function callback(data) {
+      $('head').append(data.css);
+      $('body').append(data.nav);
+    }
+  </script>
+
+  <script src="http://json-api-test.content.ibmcloud.io/nav.jsonp?callback"></script>
+</body>
+</html>
