@@ -16,6 +16,11 @@ app.get '/', (req, res) ->
     title: 'Markup API Documentation'
     message: 'Hello!'
 
+app.get '/old', (req, res) ->
+  logRequest req.url, res.statusCode
+
+  res.redirect 301, '/'
+
 app.get '/markup', (req, res) ->
   logRequest req.url, res.statusCode
 
