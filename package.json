@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mmwtsn/markup-api",
   "devDependencies": {
     "coffee-script": "^1.8.0",
-    "express": "^4.9.5"
+    "express": "^4.9.5",
+    "jade": "^1.7.0"
   }
 }
