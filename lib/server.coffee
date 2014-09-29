@@ -11,7 +11,7 @@ app.get '/', (req, res) ->
 
   res.redirect 301, 'https://github.com/mmwtsn/markup-api#markup-api'
 
-app.get '/markup', (req, res) ->
+app.get '/api/v1/cloud.json', (req, res) ->
   logRequest req.url, res.statusCode
 
   res.header 'Content-Type', 'application/json'
