@@ -65,8 +65,7 @@ Here's a simple implementation using jQuery:
   }
 </script>
 
-<script
-src="http://markup.content.ibmcloud.io/api/v1/cloud.json?callback=render"></script>
+<script src="http://markup.content.ibmcloud.io/api/v1/cloud.json?callback=render"></script>
 ```
 
 ## Demo
