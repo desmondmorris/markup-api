@@ -16,5 +16,14 @@ app.get '/', (req, res) ->
     title: 'Markup API Documentation'
     message: 'Hello!'
 
+app.get '/markup', (req, res) ->
+  logRequest req.url, res.statusCode
+
+  res.header 'Content-Type', 'application/json'
+  res.header 'Charset', 'utf-8'
+
+  res.send
+    hello: 'world'
+
 server = app.listen port, ->
   console.log 'Listening on port %d', server.address().port
