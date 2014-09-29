@@ -1,9 +1,6 @@
 express = require('express')
 app     = express()
 
-app.set 'views', './views'
-app.set 'view engine', 'jade'
-
 port = process.env.PORT || 4000
 
 logRequest = (url, status) ->
@@ -12,14 +9,7 @@ logRequest = (url, status) ->
 app.get '/', (req, res) ->
   logRequest req.url, res.statusCode
 
-  res.render 'index',
-    title: 'Markup API Documentation'
-    message: 'Hello!'
-
-app.get '/old', (req, res) ->
-  logRequest req.url, res.statusCode
-
-  res.redirect 301, '/'
+  res.redirect 301, 'https://github.com/mmwtsn/markup-api#markup-api'
 
 app.get '/markup', (req, res) ->
   logRequest req.url, res.statusCode
