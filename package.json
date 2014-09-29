@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/mmwtsn/markup-api/issues"
   },
-  "homepage": "https://github.com/mmwtsn/markup-api"
+  "homepage": "https://github.com/mmwtsn/markup-api",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "express": "^4.9.5"
+  }
 }
