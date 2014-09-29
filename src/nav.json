@@ -1,4 +1,4 @@
 {
   "html": "<nav class=\"primary navigation\"><a href=\"/home\">home</a></nav>",
-  "css": "nav.primary a { display: inline-block; background: #ddd; padding: 0.5rem 1rem; border-radius: 2px; }"
+  "css": "nav.primary a { color: #fff; background: #f08080; border-bottom: 3px #d76767; border-radius: 2px; display: block; margin: 0 auto; padding: 0.5rem 1rem; text-align: center; text-decoration: none; width: 3rem; } nav.primary a:hover { background: #f57777; }"
 }
