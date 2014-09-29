@@ -1,0 +1,4 @@
+{
+  "nav": "<nav class=\"primary navigation\"><a href=\"/home\">home</a></nav>",
+  "css": "display: inline-block; background: #ddd; padding: 0.5rem 1rem; border-radius: 2px;"
+}
