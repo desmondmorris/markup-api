@@ -1,0 +1,14 @@
+main {
+  margin: 5rem auto;
+  padding: 1rem;
+  max-width: 960px;
+  width: 100%;
+}
+
+main p {
+  max-width: 600px;
+}
+
+main a {
+  color: #008abf;
+}
