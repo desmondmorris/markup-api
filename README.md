@@ -78,24 +78,26 @@ To reproduce the demo in your own application, you'll need four things:
 - jQuery
 
 Start by [downloading](https://raw.githubusercontent.com/mmwtsn/markup-api/gh-pages/src/markup-jsonp-library.js)
-the `render` function into a local directory (here, "public") and source it along
-with jQuery and your API call at the bottom of your page:
+the little library containing the `render` function into a local directory. We
+named our directory "public" in this example. Source it at the bottom of your
+page along with API call and jQuery (if it isn't already loaded).
 
-```
-<!-- Load jQuery from Google's CDN -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+```html
+  <!-- Load jQuery from Google's CDN -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-<!-- Load the teensy Markup API library -->
-<script src="public/markup-jsonp-library.js" type="text/javascript" charset="utf-8"></script>
+  <!-- Load the teensy Markup API library -->
+  <script src="public/markup-jsonp-library.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- Call the Markup API -->
-<script src="http://markup.content.ibmcloud.io/api/v1/cloud.json?callback=render"></script>
+  <!-- Call the Markup API -->
+  <script src="http://markup.content.ibmcloud.io/api/v1/cloud.json?callback=render"></script>
+</body>
 ```
 
 Then add the `target` element wherever you wish. We put ours at the top of our
 page as the HTML being sent by the API is a global masthead element:
 
-```
+```html
 <div id="#target"></div>
 ```
 
