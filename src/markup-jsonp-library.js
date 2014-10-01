@@ -1,15 +1,11 @@
-(function ($) {
-  'use strict';
+function insertStyles(styles) {
+  var open  = '<style type="text/css" media="all">';
+  var close = '</style>';
 
-  function insertStyles(styles) {
-    var open  = '<style type="text/css" media="all">';
-    var close = '</style>';
+  return open + styles + close;
+}
 
-    return open + styles + close;
-  }
-
-  function render(data) {
-    $('head').append(insertStyles(data.css));
-    $('#target').append(data.html);
-  }
-}(jQuery));
+function render(data) {
+  $('head').append(insertStyles(data.css));
+  $('#target').append(data.html);
+}
