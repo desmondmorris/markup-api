@@ -1,8 +1,7 @@
 # Markup API
 ## Description
-A JSON API that returns HTML for the IBM Cloud Marketing properties. Can be used
-by client-side applications with a [JSONP
-callback](http://en.wikipedia.org/wiki/JSONP).
+"Markup API" is a JSON API that returns HTML for the IBM Cloud Marketing
+properties. Can be consumed on the client-side with a [JSONP callback](http://en.wikipedia.org/wiki/JSONP).
 
 Built for the IBM Cloud Lab.
 
@@ -16,9 +15,6 @@ example using cURL:
 ```bash
 $ curl http://markup.content.ibmcloud.io/api/v1/cloud.json
 ```
-
-You'll receive a sample response back as the markup elements this API was designed
-to return are still being built.
 
 By default, the endpoint will return a JSON
 data object which can be used both on the server-side or the client-side. In
@@ -73,6 +69,35 @@ A working demo of the above approach can be [viewed
 online](http://mmwtsn.github.io/markup-api/). The source code is available on
 the [GitHub Pages](https://github.com/mmwtsn/markup-api/tree/gh-pages) branch of
 this repository.
+
+To reproduce the demo in your own application, you'll need four things:
+
+- a script tag to call the API's JSONP endpoint
+- a JavaScript function called `render` to handle the API response
+- an HTML element with the id of `target` to accept the appended HTML
+- jQuery
+
+Start by [downloading](https://raw.githubusercontent.com/mmwtsn/markup-api/gh-pages/src/markup-jsonp-library.js)
+the `render` function into a local directory (here, "public") and source it along
+with jQuery and your API call at the bottom of your page:
+
+```
+<!-- Load jQuery from Google's CDN -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Load the teensy Markup API library -->
+<script src="public/markup-jsonp-library.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Call the Markup API -->
+<script src="http://markup.content.ibmcloud.io/api/v1/cloud.json?callback=render"></script>
+```
+
+Then add the `target` element wherever you wish. We put ours at the top of our
+page as the HTML being sent by the API is a global masthead element:
+
+```
+<div id="#target"></div>
+```
 
 ## Author
 [M. Maxwell Watson](http://mmwtsn.com/)
