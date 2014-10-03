@@ -4,6 +4,9 @@
   "engines": {
     "node": "0.10.x"
   },
+  "scripts": {
+    "start": "./node_modules/.bin/coffee lib/server.coffee"
+  },
   "description": "Markup API for the IBM Cloud Lab",
   "repository": {
     "type": "git",
